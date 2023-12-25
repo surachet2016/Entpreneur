@@ -7,7 +7,7 @@ export const Actions = () => {
   let [userLength, setUserLength] = useState(null);
 
   useEffect(() => {
-    fetch("https://vfkolok.com/entrepreneur1/all_users.php")
+    fetch("localhost/entrepreneur/all_users.php")
       .then((res) => {
         return res.json();
       })
@@ -26,7 +26,7 @@ export const Actions = () => {
 
   // fetch users
   const getUsers = () => {
-    fetch("https://vfkolok.com/entrepreneur1/all_users.php")
+    fetch("localhost/entrepreneur/all_users.php")
       .then((res) => {
         return res.json();
       })
@@ -45,7 +45,7 @@ export const Actions = () => {
 
   // Inserting a new user into the database.
   const insertUser = async (newUser) => {
-    return fetch("https://vfkolok.com/entrepreneur1/add_users.php", {
+    return fetch("localhost/entrepreneur/add_users.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export const Actions = () => {
 
   // Updating a user.
   const updateUser = (userData) => {
-    fetch("https://vfkolok.com/entrepreneur1/update_users.php", {
+    fetch("localhost/entrepreneur/update_users.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -142,7 +142,7 @@ export const Actions = () => {
     let userDeleted = users.filter((user) => {
       return user.id !== theID;
     });
-    fetch("https://vfkolok.com/entrepreneur1/delete_users.php", {
+    fetch("localhost/entrepreneur/delete_users.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
