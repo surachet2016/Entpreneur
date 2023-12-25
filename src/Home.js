@@ -20,7 +20,7 @@ const Home = ({ setLoggedIn }) => {
     }
 
     try {
-      const response = await fetch("localhost/login_api/login.php", {
+      const response = await fetch("localhost/api_user/login.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
