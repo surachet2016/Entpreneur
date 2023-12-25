@@ -20,7 +20,7 @@ const Home = ({ setLoggedIn }) => {
     }
 
     try {
-      const response = await fetch("https://vfkolok.com/api_user/login.php", {
+      const response = await fetch("localhost/login_api/login.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
