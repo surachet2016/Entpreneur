@@ -24,7 +24,7 @@ const Register = ({ setLoggedIn }) => {
 
       // Make a POST request to your PHP API endpoint
       const response = await fetch(
-        "https://vfkolok.com/api_user/register.php",
+        "localhost/login_api/register.php",
         {
           method: "POST",
           headers: {
