@@ -25,7 +25,7 @@ if ($result) {
         // Verify the provided password against the hashed password
         if (password_verify($password, $hashedPassword)) {
             // Generate a token
-            $secret_key = "i4RN4KZuEe1a3F9Oc0YD5vVsjZrTtNb6"; // Replace with a secure secret key
+            $secret_key = "YOUR_SECRET_KEY"; // Replace with a secure secret key
             $payload = array("user_id" => $userId);
             $token = jwt_encode($payload, $secret_key); // Use a library like Firebase JWT to encode the token
 
