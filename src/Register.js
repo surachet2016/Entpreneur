@@ -24,7 +24,7 @@ const Register = ({ setLoggedIn }) => {
 
       // Make a POST request to your PHP API endpoint
       const response = await fetch(
-        "localhost/login_api/register.php",
+        "localhost/api_user/register.php",
         {
           method: "POST",
           headers: {
